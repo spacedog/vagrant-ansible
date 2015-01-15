@@ -1,2 +1,11 @@
 [info]
 na1-xiv-c[1001:1070]
+
+[test]
+centos01 ansible_ssh_port=2222 
+centos02 ansible_ssh_port=2223
+
+[test:vars]
+ansible_ssh_host=127.0.0.1
+ansible_ssh_user=vagrant
+gather_facts=no
