@@ -1,0 +1,8 @@
+---
+
+- name: common configuration for all servers
+  hosts: test
+  remote_user: vagrant
+
+  roles:
+    - common
