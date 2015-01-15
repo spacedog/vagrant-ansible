@@ -1,0 +1,15 @@
+---
+
+- name: install libselinux-python
+  yum: name=libselinux-python state=present
+
+- name: install ntp
+  yum: name=ntp state=present
+
+- name: configure ntp
+  template:  src=ntp.conf.j2 dest=/etc/ntp.conf
+  notify: restart ntp
+
+- name: start ntp service
+  service: name=ntpd state=started enabled=yes
+
