@@ -1,6 +1,3 @@
-[info]
-na1-xiv-c[1001:1070]
-
 [test]
 centos01 ansible_ssh_port=2222 
 centos02 ansible_ssh_port=2223
